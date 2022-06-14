@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdministrateurController;
+use App\Http\Controllers\CommandeController;
+use App\Http\Controllers\UtilisateurController;
+use App\Http\Controllers\ProduitController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('utilisateurs', UtilisateurController::class);
+Route::resource('produits', ProduitController::class);
+Route::resource('commandes', CommandeController::class);
+Route::resource('administrateurs', AdministrateurController::class);
