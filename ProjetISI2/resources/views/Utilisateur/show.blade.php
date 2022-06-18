@@ -12,7 +12,7 @@
 
 <h2>{{ $utilisateur->nom }} {{ $utilisateur->prenom }}</h2>
 <p>Mail : {{ $utilisateur->mail }}</p>
-<p>Mail : {{ $utilisateur->naissance }}</p>
+<p>Date de naissance : {{ $utilisateur->naissance }}</p>
 <h3>Commandes :</h3>
 <table class="table table-bordered table-striped">
         <thead>
