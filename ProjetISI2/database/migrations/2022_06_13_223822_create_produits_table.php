@@ -20,8 +20,8 @@ class CreateProduitsTable extends Migration
             $table->float("taux_tva");
             $table->double("prix_ttc");
             $table->string("reference");
-            $table->unsignedBigInteger("id_admin");
-            $table->foreign("id_admin")
+            $table->unsignedBigInteger("admin_id");
+            $table->foreign("admin_id")
                 ->references("id")
                 ->on("administrateurs")
                 ->onDelete("cascade")

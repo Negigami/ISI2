@@ -9,8 +9,8 @@ class Produit extends Model
 {
     use HasFactory;
 
-    public function commande() {
-        return $this->belongsToMany(Commande::class)->withPivot("quantite");
+    public function commandes() {
+        return $this->belongsToMany(Commande::class, 'commande_produit', 'id_commande', 'id_commande')->withPivot("quantite");
     }
 
     public function administrateur() {

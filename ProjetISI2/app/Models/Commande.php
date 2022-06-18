@@ -9,11 +9,11 @@ class Commande extends Model
 {
     use HasFactory;
 
-    public function utilisateurs() {
+    public function utilisateur() {
         return $this->belongsTo(Utilisateur::class);
     }
 
-    public function produit() {
-        return $this->belongsToMany(Produit::class)->withPivot("quantite");
+    public function produits() {
+        return $this->belongsToMany(Produit::class, 'commande_produit')->withPivot("quantite");
     }
 }

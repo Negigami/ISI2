@@ -17,15 +17,15 @@ class CommandeProduit extends Migration
             $table->id();
             $table->integer("quantite");
 
-            $table->unsignedBigInteger("id_commande");
-            $table->foreign("id_commande")
+            $table->unsignedBigInteger("commande_id");
+            $table->foreign("commande_id")
                 ->references("id")
                 ->on("commandes")
                 ->onDelete("cascade")
                 ->onUpdate("cascade");
 
-            $table->unsignedBigInteger("id_produit");
-            $table->foreign("id_produit")
+            $table->unsignedBigInteger("produit_id");
+            $table->foreign("produit_id")
                 ->references("id")
                 ->on("produits")
                 ->onDelete("cascade")
