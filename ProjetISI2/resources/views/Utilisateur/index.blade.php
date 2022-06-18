@@ -17,6 +17,7 @@
             <th>Email</th>
             <th>Mdp</th>
             <th>Date de naissance</th>
+            <th>Détails</th>
         </thead>
         @foreach($utilisateurs as $utilisateur)
             <tr>
@@ -26,6 +27,7 @@
                 <td> {{ $utilisateur->mail }} </td>
                 <td> {{ $utilisateur->mdp }} </td>
                 <td> {{ $utilisateur->naissance }} </td>
+                <td><a class="btn btn-primary" href="{{ route('utilisateurs.show', $utilisateur->id) }}">Voir</a></td>
             </tr>
         @endforeach
     </table>
