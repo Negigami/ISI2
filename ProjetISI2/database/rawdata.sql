@@ -1,0 +1,16 @@
+insert into utilisateurs(nom, prenom, mail, mdp, naissance) value ('BOUCHARD', 'Clément', 'clementbouchard@gmail.com', sha('trolilo'), '2001-5-03');
+insert into utilisateurs(nom, prenom, mail, mdp, naissance) value ('GAY', 'Sarah', 'sarahgay@gmail.com', sha('choubidou'), '2000-7-03');
+insert into administrateurs(login, mdp) value  ('HeadMaster', sha('root'));
+insert into administrateurs(login, mdp) value  ('GestionStock', sha('root'));
+insert into commandes(date, utilisateur_id) value (curdate(), 2);
+insert into commandes(date, utilisateur_id) value (curdate(), 1);
+insert into produits (nom, prix_ht, prix_ttc, taux_tva, reference, admin_id) value ('MacBook', 1700, 2040, 0.20, 'HJ4651HEBD5J', 1);
+insert into produits (nom, prix_ht, prix_ttc, taux_tva, reference, admin_id) value ('NvidiaGTX', 3000, 3600, 0.20, 'HFDBJUD51DBF', 1);
+insert into produits (nom, prix_ht, prix_ttc, taux_tva, reference, admin_id) value ('RAM Corsaire', 150, 180, 0.20, 'KEEBF2815FBG', 2);
+insert into produits (nom, prix_ht, prix_ttc, taux_tva, reference, admin_id) value ('Ventirad', 50, 60, 0.20, 'SLFNIA2819BAJ', 2);
+insert into commande_produit(quantite, commande_id, produit_id) value (3, 2, 3);
+insert into commande_produit(quantite, commande_id, produit_id) value (1, 2, 2);
+insert into commande_produit(quantite, commande_id, produit_id) value (1, 2, 4);
+insert into commande_produit(quantite, commande_id, produit_id) value (3, 1, 2);
+insert into commande_produit(quantite, commande_id, produit_id) value (1, 1, 3);
+insert into commande_produit(quantite, commande_id, produit_id) value (1, 1, 1);

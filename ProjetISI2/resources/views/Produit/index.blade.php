@@ -17,7 +17,6 @@
             <th>Prix TTC</th>
             <th>Taux TVA</th>
             <th>Reference</th>
-            <th>Id admin</th>
         </thead>
         @foreach($produits as $produit)
             <tr>
@@ -27,7 +26,6 @@
                 <td> {{ $produit->prix_ttc }} </td>
                 <td> {{ $produit->taux_tva }} </td>
                 <td> {{ $produit->reference }} </td>
-                <td> {{ $produit->id_admin }} </td>
             </tr>
         @endforeach
     </table>
